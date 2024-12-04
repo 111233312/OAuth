@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    {% if user_info.names and user_info.names[0].displayName %}
+        <p>Welcome, {{ user_info.names[0].displayName }}</p>
+    {% else %}
+        <p>Welcome, Guest</p>
+    {% endif %}
+    {% if user_info.emailAddresses and user_info.emailAddresses[0].value %}
+        <p>Your email: {{ user_info.emailAddresses[0].value }}</p>
+    {% else %}
+        <p>Email not available</p>
+    {% endif %}
+</body>
+</html>
